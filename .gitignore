@@ -1,5 +1,4 @@
 /node_modules/
 /dist/
-/packages/win
-/packages/mac
-/packages/linux
+/packages/*
+!/packages/*.MD
