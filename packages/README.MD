@@ -1,11 +1,3 @@
 # 资源存放位置
 
-如下：
-
-application-packages/
-├─ packages/
-│ ├─ latest-mac.yml
-│ ├─ my-app-1.0.0.dmg
-│ └─ my-app-1.0.0-arm64.dmg
-└─ src/
-└─ index.js
+每次打包生成的安装包.exe 文件和 latest.yml 文件，放入 packages 目录下，即可完成发版，OTA 更新软件。

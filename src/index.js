@@ -1,13 +1,12 @@
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
+import { join } from "path";
 import express from "express";
-
-const __filename = fileURLToPath(import.meta.url);
+import { getLocalIPv4 } from "./utils/index.js";
 
 const app = express();
 
-app.use("/release", express.static(join(__filename, "../../packages")));
+app.use("/release", express.static(join(import.meta.dirname, "../packages")));
 
 app.listen(3000, () => {
-  console.log("server is running");
+  const ip = getLocalIPv4();
+  console.log(`server is running at http://${ip}:3000/release`);
 });
