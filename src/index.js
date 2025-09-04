@@ -7,7 +7,11 @@ const app = express();
 
 const packagesPath = join(import.meta.dirname, "../packages");
 
-app.use("/release", express.static(packagesPath), serveIndex(packagesPath));
+app.use(
+  "/release",
+  express.static(packagesPath),
+  serveIndex(packagesPath, { icons: true })
+);
 
 app.listen(3000, () => {
   const ip = getLocalIPv4();
